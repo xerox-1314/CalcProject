@@ -1,4 +1,4 @@
-module disCom
+module CalcModule
 
 go 1.21.0
 

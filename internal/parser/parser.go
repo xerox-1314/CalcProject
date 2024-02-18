@@ -1,7 +1,7 @@
 package parser
 
 import (
-	constants "disCom/internal/env"
+	constants "CalcModule/internal/env"
 	"errors"
 	"fmt"
 	"regexp"

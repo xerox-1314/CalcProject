@@ -2,8 +2,8 @@ package database
 
 import (
 	"database/sql"
-	"disCom/internal/expression"
-	"disCom/internal/logger"
+	"CalcModule/internal/expression"
+	"CalcModule/internal/logger"
 	"sync"
 
 	_ "github.com/mattn/go-sqlite3"

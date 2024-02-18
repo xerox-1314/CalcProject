@@ -3,8 +3,8 @@ package orchestrator
 //Здесь лежит и агент и оркестратор
 
 import (
-	"disCom/internal/agent"
-	"disCom/internal/expression"
+	"CalcModule/internal/agent"
+	"CalcModule/internal/expression"
 	"encoding/json"
 	"fmt"
 	"io"
@@ -56,7 +56,7 @@ func check() { // проверяет, свободны ли воркеры, чт
 	go func() {
 		for {
 			if len(Waiting) != 0 {
-				time.Sleep(100 * time.Millisecond) // Я хз, без этого не работает
+				time.Sleep(100 * time.Millisecond)
 				expr := GetFromWaiting()
 				err := Agent.AddTask(expr)
 				//fmt.Println(err)
@@ -71,7 +71,6 @@ func check() { // проверяет, свободны ли воркеры, чт
 func mainHandler(w http.ResponseWriter, r *http.Request) {
 	if r.Method == http.MethodGet {
 		fmt.Fprintln(w, "Работает успешно\nДлина Waiting:", len(Waiting))
-		// http.Redirect(w, r, "https://www.youtube.com/watch?v=dQw4w9WgXcQ", http.StatusSeeOther) ахахаха, очень хотелось
 	} else if r.Method == http.MethodPost {
 		data, _ := io.ReadAll(r.Body)
 

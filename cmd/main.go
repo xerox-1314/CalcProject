@@ -11,13 +11,13 @@ import (
 	"strconv"
 	"text/template"
 
-	"disCom/internal/database"
-	"disCom/internal/env"
-	constants "disCom/internal/env"
-	"disCom/internal/expression"
-	"disCom/internal/logger"
-	"disCom/internal/orchestrator"
-	"disCom/internal/parser"
+	"CalcModule/internal/database"
+	"CalcModule/internal/env"
+	constants "CalcModule/internal/env"
+	"CalcModule/internal/expression"
+	"CalcModule/internal/logger"
+	"CalcModule/internal/orchestrator"
+	"CalcModule/internal/parser"
 )
 
 type expTempl struct {
@@ -35,7 +35,7 @@ func calculateHandler(w http.ResponseWriter, r *http.Request) {
 	if r.Method == http.MethodGet {
 		f, err := os.Open("frontend/main.html")
 		if err != nil {
-			logger.Log.Println("cannor open file main.html file: main.go func: calculateHandler")
+			logger.Log.Println("cannot open file main.html file: main.go func: calculateHandler")
 			http.Error(w, err.Error(), http.StatusInternalServerError)
 		}
 		body, err := io.ReadAll(f)
@@ -56,7 +56,6 @@ func calculateHandler(w http.ResponseWriter, r *http.Request) {
 		b, _ := json.Marshal(expr)
 		rb := bytes.NewReader(b)
 		http.Post("http://localhost:8081", "application/json", rb)
-		//req, err := http.NewRequest("POST", url, strings.NewReader(form.Encode()))\
 	}
 }
 
@@ -140,7 +139,6 @@ func computersHandler(w http.ResponseWriter, r *http.Request) {
 }
 
 func main() {
-
 	logger.Init()
 	database.DeleteAll()
 	orchestrator.StartServer()

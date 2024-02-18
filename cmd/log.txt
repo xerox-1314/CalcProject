@@ -1,0 +1,2 @@
+time="2024-02-18T22:36:15+07:00" level=info msg="cannor open file main.html file: main.go func: calculateHandler"
+time="2024-02-18T22:36:15+07:00" level=info msg="cannor open file main.html file: main.go func: calculateHandler"

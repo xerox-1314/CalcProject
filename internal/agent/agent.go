@@ -1,10 +1,10 @@
 package agent
 
 import (
-	"disCom/internal/database"
-	"disCom/internal/env"
-	"disCom/internal/expression"
-	"disCom/internal/worker"
+	"CalcModule/internal/database"
+	"CalcModule/internal/env"
+	"CalcModule/internal/expression"
+	"CalcModule/internal/worker"
 	"errors"
 	"fmt"
 )

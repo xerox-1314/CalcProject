@@ -2,9 +2,9 @@ package worker
 
 import (
 	"bytes"
-	"disCom/internal/database"
-	"disCom/internal/expression"
-	"disCom/internal/parser"
+	"CalcModule/internal/database"
+	"CalcModule/internal/expression"
+	"CalcModule/internal/parser"
 	"encoding/json"
 	"net/http"
 )

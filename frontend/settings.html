@@ -48,16 +48,16 @@
 <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <a class="navbar-brand" href="/">Ввод</a>
-        <a class="navbar-brand" href="/expressions">Выражения</a>
         <a class="navbar-brand" href="/computers">Вычислители</a>
+        <a class="navbar-brand" href="/expressions">Выражения</a>
         <a class="navbar-brand" href="/settings">Настройки</a>
     </nav>
 <div class="container">
-    <input id="t1" type="text" placeholder="Длительность +, сейчас {{.Plus}} сек" />
+    <input id="t1" type="text" placeholder="Длительность +, сейчас: {{.Plus}} сек" />
     
-    <input id="t2" type="text" placeholder="Длительность - сейчас {{.Minus}} сек " />
-    <input id="t3" type="text" placeholder="Длительность * сейчас {{.Mul}} сек" />
-    <input id="t4" type="text" placeholder="Длительность / сейчас {{.Div}} сек" />
+    <input id="t2" type="text" placeholder="Длительность -, сейчас: {{.Minus}} сек " />
+    <input id="t3" type="text" placeholder="Длительность *, сейчас: {{.Mul}} сек" />
+    <input id="t4" type="text" placeholder="Длительность /, сейчас: {{.Div}} сек" />
     <button onclick="calculateExpression()">Отправить</button>
 </div>
 <script>

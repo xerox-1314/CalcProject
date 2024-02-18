@@ -1,7 +1,7 @@
 package expression
 
 import (
-	"disCom/internal/parser"
+	"CalcModule/internal/parser"
 	"fmt"
 
 	"github.com/google/uuid"
